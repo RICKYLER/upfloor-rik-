@@ -1,0 +1,15 @@
+{
+  "network": "Arbitrum One",
+  "factoryAddress": "0x63938989930dcAD225224Ef57981B9349C949e2C",
+  "tokenAddress": "0xbF5fB9283edda4c5DD0660f388d7F26aa7bb80F1",
+  "routerAddress": "0x9310f02498F19C2B53e7479c898fBCB40B16f998",
+  "strategyAddress": "0x18D94276FaD4849E02f4208724B45EBB714965f3",
+  "nftCollection": "0x6Ae74e87034b486fd074Af07CcA6f92EeDD249ba",
+  "collectionOwner": "0xe10638532dd396C2C77eaf17a2AE5defB79f5245",
+  "deployer": "0xe10638532dd396C2C77eaf17a2AE5defB79f5245",
+  "protocolFeeRecipient": "0x08f7adeb04Aae45F4FCDFD8D9A24Ca53Ad83d441",
+  "tokenName": "LemonFun Arbitrum Token",
+  "tokenSymbol": "LFAT",
+  "deploymentTime": "2025-10-10T07:55:21.742Z",
+  "timestamp": 1760082921743
+}

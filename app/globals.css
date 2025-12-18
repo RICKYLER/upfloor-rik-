@@ -1,0 +1,453 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* LemonFun Citrus Theme - Light Mode */
+  --background: #ffffff;
+  --foreground: #0d0d10;
+
+  --card: #ffffff;
+  --card-foreground: #12131a;
+
+  --popover: #ffffff;
+  --popover-foreground: #12131a;
+
+  /* Primary brand = deep purple (Sprint energy) */
+  --primary: #651bd0;
+  --primary-foreground: #ffffff;
+
+  /* Secondary/sections background tint */
+  --secondary: #f3f4f8;
+  --secondary-foreground: #0d0d10;
+
+  --muted: #f1f2f6;
+  --muted-foreground: #5a5f6d;
+
+  /* Accent = teal; Additional accent = blue */
+  --accent: #01f2be;
+  --accent-foreground: #06211a;
+
+  --destructive: #e5484d;
+  --destructive-foreground: #ffffff;
+
+  --border: #e6e8ef;
+  --input: #e6e8ef;
+  --ring: #651bd0;
+
+  /* Charts use our 3-5 color system */
+  --chart-1: #651bd0; /* primary purple */
+  --chart-2: #01f2be; /* teal */
+  --chart-3: #00abff; /* blue */
+  --chart-4: #d407ef; /* magenta (sparingly) */
+  --chart-5: #5a5f6d; /* neutral */
+
+  --radius: 0.625rem;
+
+  /* Sidebar */
+  --sidebar: #fafbff;
+  --sidebar-foreground: #12131a;
+  --sidebar-primary: #651bd0;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f1f2f6;
+  --sidebar-accent-foreground: #0d0d10;
+  --sidebar-border: #e6e8ef;
+  --sidebar-ring: #651bd0;
+
+  /* Brand aliases (keep old variable names for component compatibility) */
+  --brand-lemon: #651bd0; /* now primary purple */
+  --brand-lime: #01f2be; /* teal */
+  --brand-orange: #00abff; /* blue */
+  --brand-forest: #0d0d10; /* near-black */
+  --brand-cream: #ffffff; /* white */
+}
+
+.dark {
+  /* LemonFun Citrus Theme - Dark Mode */
+  --background: #0d0d10;
+  --foreground: #f6f7fb;
+
+  --card: #111218;
+  --card-foreground: #f6f7fb;
+
+  --popover: #111218;
+  --popover-foreground: #f6f7fb;
+
+  --primary: #7a39da;
+  --primary-foreground: #ffffff;
+
+  --secondary: #171923;
+  --secondary-foreground: #f6f7fb;
+
+  --muted: #171923;
+  --muted-foreground: #a8adba;
+
+  --accent: #01f2be;
+  --accent-foreground: #06211a;
+
+  --destructive: #f2555b;
+  --destructive-foreground: #ffffff;
+
+  --border: #222435;
+  --input: #222435;
+  --ring: #7a39da;
+
+  --chart-1: #7a39da;
+  --chart-2: #01f2be;
+  --chart-3: #00abff;
+  --chart-4: #d86af4;
+  --chart-5: #a8adba;
+
+  --sidebar: #12131a;
+  --sidebar-foreground: #f6f7fb;
+  --sidebar-primary: #7a39da;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #171923;
+  --sidebar-accent-foreground: #f6f7fb;
+  --sidebar-border: #222435;
+  --sidebar-ring: #7a39da;
+
+  /* Brand aliases */
+  --brand-lemon: #7a39da;
+  --brand-lime: #01f2be;
+  --brand-orange: #00abff;
+  --brand-forest: #f6f7fb;
+  --brand-cream: #0d0d10;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-brand-lemon: var(--brand-lemon);
+  --color-brand-lime: var(--brand-lime);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-forest: var(--brand-forest);
+  --color-brand-cream: var(--brand-cream);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* LemonFun Citrus Theme Animations */
+@layer utilities {
+  .citrus-bounce {
+    animation: citrus-bounce 2s infinite;
+  }
+
+  .citrus-pulse {
+    animation: citrus-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .citrus-float {
+    animation: citrus-float 3s ease-in-out infinite;
+  }
+
+  .citrus-glow {
+    box-shadow: 0 0 20px var(--brand-lemon);
+    animation: citrus-glow 2s ease-in-out infinite alternate;
+  }
+
+  .citrus-gradient {
+    background-color: var(--brand-lemon); /* primary purple */
+  }
+
+  .citrus-text-gradient {
+    background: none;
+    color: var(--brand-lemon);
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: var(--brand-lemon);
+  }
+
+  .citrus-border-gradient {
+    border: 2px solid var(--brand-lemon);
+    background: var(--background);
+  }
+
+  .citrus-button {
+    background-color: var(--brand-lemon);
+    color: var(--brand-cream);
+    font-weight: 600;
+    transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+  }
+  .citrus-button:hover {
+    background-color: color-mix(in oklab, var(--brand-lemon) 85%, black);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+  .citrus-button:active {
+    transform: translateY(0);
+  }
+
+  /* Cosmic Mascot Utility Classes */
+  .cosmic-float {
+    animation: cosmic-float 4s ease-in-out infinite;
+  }
+
+  .cosmic-glow {
+    animation: cosmic-glow 3s ease-in-out infinite;
+  }
+
+  .energy-pulse {
+    animation: energy-pulse 2s ease-in-out infinite;
+  }
+
+  .cosmic-rotate {
+    animation: cosmic-rotate 20s linear infinite;
+  }
+
+  .particle-float {
+    animation: particle-float 3s ease-in-out infinite;
+  }
+}
+
+@keyframes citrus-bounce {
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%,
+  43% {
+    transform: translate3d(0, -8px, 0);
+  }
+  70% {
+    transform: translate3d(0, -4px, 0);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+@keyframes citrus-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes citrus-float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes citrus-glow {
+  0% {
+    box-shadow: 0 0 20px var(--brand-lemon);
+  }
+  100% {
+    box-shadow: 0 0 30px var(--brand-lime), 0 0 40px var(--brand-orange);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes progress {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Cosmic Mascot Animations */
+@keyframes cosmic-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-6px) rotate(-1deg);
+  }
+}
+
+@keyframes cosmic-glow {
+  0%, 100% {
+    filter: brightness(1.1) contrast(1.1) drop-shadow(0 0 20px rgba(236, 72, 153, 0.3));
+  }
+  50% {
+    filter: brightness(1.2) contrast(1.15) drop-shadow(0 0 30px rgba(168, 85, 247, 0.4));
+  }
+}
+
+@keyframes energy-pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes cosmic-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes particle-float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.4;
+  }
+  25% {
+    transform: translateY(-10px) translateX(5px);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-15px) translateX(0px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateY(-8px) translateX(-3px);
+    opacity: 0.6;
+  }
+}
+
+/* Citrus-themed hover effects */
+.citrus-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.citrus-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Horizontal scroll styles */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.horizontal-scroll {
+  scroll-behavior: smooth;
+}
+
+/* Buy NFTs Tab Animations */
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animate-scan {
+  animation: scan 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}

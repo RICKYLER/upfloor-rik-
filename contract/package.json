@@ -1,0 +1,46 @@
+{
+  "name": "auctionstrat",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "npx hardhat test",
+    "test:rewards": "npx hardhat test test/RewardMechanism.test.js",
+    "test:rewards:standalone": "npx hardhat run scripts/testRewardMechanism.js --network hardhat",
+    "set-reward": "npx hardhat run scripts/setRewardPercentage.js --network hardhat",
+    "reward-manager": "npx hardhat run scripts/rewardManager.js --network hardhat",
+    "check-burned": "npx hardhat run scripts/checkBurnedTokens.js --network hardhat",
+    "test-burn": "npx hardhat run scripts/testBurnMechanism.js --network hardhat",
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run scripts/deploy.js",
+    "deploy:arbitrum": "npx hardhat run scripts/deploy-arbitrum-sepolia-test.js --network arbitrumSepolia",
+    "test:arbitrum": "npx hardhat run scripts/test-arbitrum-functionality.js --network arbitrumSepolia",
+    "run:arbitrum": "node scripts/run-arbitrum-test.js",
+    "verify:arbitrum": "npx hardhat run scripts/verify-arbitrum-deployment.js --network arbitrumSepolia",
+    "deploy:taiko": "npx hardhat run scripts/deploy-taiko-factory.js --network taikoalethia",
+    "taiko:setup": "npx hardhat run scripts/taikoIntegration.js --network taikoalethia"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.1.0",
+    "@nomicfoundation/hardhat-ethers": "^3.1.0",
+    "@nomicfoundation/hardhat-ignition": "^0.15.13",
+    "@nomicfoundation/hardhat-ignition-ethers": "^0.15.14",
+    "@nomicfoundation/hardhat-network-helpers": "^1.1.0",
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@nomicfoundation/hardhat-verify": "^2.1.1",
+    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
+    "chai": "^4.5.0",
+    "ethers": "^6.15.0",
+    "hardhat": "^2.26.3",
+    "hardhat-contract-sizer": "^2.10.1",
+    "hardhat-gas-reporter": "^2.3.0",
+    "solidity-coverage": "^0.8.16",
+    "typechain": "^8.3.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "axios": "^1.13.1",
+    "dotenv": "^17.2.3",
+    "node-fetch": "^3.3.2",
+    "solady": "^0.1.26"
+  }
+}

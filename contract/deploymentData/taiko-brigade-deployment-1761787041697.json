@@ -1,0 +1,27 @@
+{
+  "network": "taiko",
+  "chainId": 167000,
+  "timestamp": 1761787041697,
+  "deployer": "0x84A7818F15D42e77EC028DDe50D84Db82FEBf46D",
+  "collection": {
+    "name": "BrigadeAssets",
+    "symbol": "BRIGADE",
+    "nftCollection": "0x77d64eca9ede120280e9ffe19990f0caf4bb45da",
+    "collectionOwner": "0x84A7818F15D42e77EC028DDe50D84Db82FEBf46D",
+    "royaltyRecipient": "0x0dac4637a9b04f64c6b92a19866cd0764adfb6a8",
+    "royaltyBps": 700
+  },
+  "contracts": {
+    "factory": "0xB16EAa34cA11291a70Acfc16440F3aABAf89E332",
+    "token": "0x1dB78Fac36F88d55836587Ba9328B952227b19b8",
+    "router": "0x7be7Ffd7d381C20074A08d4398D87a578289F6c7",
+    "strategy": "0x6d15CfC14A74785785A91B84029e2a59b53B035D"
+  },
+  "taiko": {
+    "marketplace": "0x89aFa165F40f2210c99e87E706C0160503E12F1c",
+    "paymentToken": "0xA9d23408b9bA935c230493c40C73824Df71A0975",
+    "autoConfigured": true
+  },
+  "transactionHash": "0x86a5732724bf1ba1bae437f9d24c88ddc9377d70f328d66a05bae19bc02a65d6",
+  "deploymentFee": "0.00025"
+}

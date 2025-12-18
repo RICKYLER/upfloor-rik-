@@ -1,0 +1,11 @@
+{
+  "network": "monadtestnet",
+  "chainId": "10143",
+  "factoryAddress": "0xf0945Db3648b01F423444980C0e9180A6CF13352",
+  "deployer": "0x42d4B976526035d682fF29BC791081e807aFdcD6",
+  "factoryOwner": "0x42d4B976526035d682fF29BC791081e807aFdcD6",
+  "protocolFeeRecipient": "0x08f7adeb04Aae45F4FCDFD8D9A24Ca53Ad83d441",
+  "deploymentFee": "0.00025",
+  "timestamp": "2025-10-22T19:31:38.252Z",
+  "blockNumber": 44808972
+}

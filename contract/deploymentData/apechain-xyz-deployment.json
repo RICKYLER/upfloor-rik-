@@ -1,0 +1,17 @@
+{
+  "network": "apechain",
+  "factoryAddress": "0xE8E1CcA455F59b1C9351d503B4a81E9D38324884",
+  "tokenAddress": "0xc41670C04E162D3207Be18eef60C6341953B9B32",
+  "routerAddress": "0x48BcB87056f38008ae1924a0d1a993D0954f65c9",
+  "strategyAddress": "0x6006e62c5557c6c79a9dDdEAadc6e361567d8CDa",
+  "tokenName": "XYZ Token",
+  "tokenSymbol": "XYZ",
+  "nftCollectionAddress": "0x2132e53a520da3783135016c2d1c03cbb4576433",
+  "collectionOwnerAddress": "0xf41dBD4A1ee6f8f6CB8879f0568Ead8CA9D259b2",
+  "deployer": "0xf41dBD4A1ee6f8f6CB8879f0568Ead8CA9D259b2",
+  "tokenOwner": "0xf41dBD4A1ee6f8f6CB8879f0568Ead8CA9D259b2",
+  "solverAddress": "0x3E774175d1b550A9FFb688865a09e60fC1216341",
+  "transactionHash": "0xae3912573d992283b07faf96870f59c458d9aaeb3d352c036a8f2a520d862b57",
+  "blockNumber": 25087480,
+  "timestamp": "2025-10-16T12:53:45.382Z"
+}

@@ -1,0 +1,10 @@
+{
+  "network": "taikoalethia",
+  "chainId": "167000",
+  "factoryAddress": "0x9ea42D6D3f10F3244c26efC6A210e7ddcb3498eE",
+  "deploymentFee": "0.00025",
+  "owner": "0x42d4B976526035d682fF29BC791081e807aFdcD6",
+  "deployer": "0x42d4B976526035d682fF29BC791081e807aFdcD6",
+  "timestamp": "2025-10-22T18:59:23.547Z",
+  "blockNumber": 2948838
+}
